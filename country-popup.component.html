@@ -1,0 +1,21 @@
+<div class="modal-content">
+  <form class="example-form" [formGroup]="addCountryForm"  #roleFormDirective="ngForm" (ngSubmit)="toSave()">
+
+    <div class="modal-header">
+      <div class="modal-title h4" id="example-modal-sizes-title-lg">
+        <h1>country</h1>
+      </div>
+    </div>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Country Name</mat-label>
+      <input matInput placeholder="Country Name" formControlName="name">
+    </mat-form-field>
+
+    <div class="footer-button">
+      <button class="product-button" mat-raised-button color="primary" (click)="toSave()">Save</button>&nbsp;&nbsp;
+      <button class="product-button" mat-raised-button color="primary" (click)="toCancel()">Cancel</button>
+    </div>
+
+  </form>
+</div>

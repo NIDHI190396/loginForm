@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url("../../assets/images/natureimage.png");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: center;
+  background-attachment: fixed;
+  position: absolute;
+  background-size: cover;
+}
+
+.child {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(182, 201, 235);
+  margin: 0 auto;
+  margin-top: 160px;
+}
+
+.header{
+   text-align: center;
+   padding: 5px;
+   font-size: 20px;
+}
+
+.form-group{
+  text-align: center;
+  padding: 8px;
+}
+
+label{
+  font-size: 20px;
+}
+
+input{
+  height: 20px;
+}
+
+.btn-primary{
+  margin-left: 132px;
+  padding: 5px;
+  width: 100px;
+}
+
+
+
+

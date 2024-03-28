@@ -1,0 +1,56 @@
+<div style="margin-left:20%;padding:1px 16px;height:1000px;margin-top:10px;">
+
+
+
+  <div class="modal-title h4" id="example-modal-sizes-title-lg">
+    <button mat-raised-button color="primary" (click)="create()" class="demo-button">Add state</button>
+  </div>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element; let i=index"> {{i+1}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="countryId">
+    <th mat-header-cell *matHeaderCellDef> Country Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.countryId}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="countryName">
+    <th mat-header-cell *matHeaderCellDef> Country Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.countryName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="stateId">
+    <th mat-header-cell *matHeaderCellDef> State Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.stateId}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="stateName">
+    <th mat-header-cell *matHeaderCellDef> State Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.stateName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let user; let j = index">
+      <button class= "update-button" mat-fab color="primary" (click)="edit(user)">
+        <mat-icon>edit</mat-icon>
+      </button>&nbsp;
+      <button class= "update-button" mat-fab color="primary" (click)="toDelete(user)" aria-label="Example icon button with a delete icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+     </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+</div>
+

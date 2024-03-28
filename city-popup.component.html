@@ -1,0 +1,38 @@
+<div class="modal-content">
+  <form class="example-form" [formGroup]="addCityForm"  #roleFormDirective="ngForm" (ngSubmit)="toSave()">
+
+    <div class="modal-header">
+      <div class="modal-title h4" id="example-modal-sizes-title-lg">
+        <h1>City</h1>
+      </div>
+    </div>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Country Name</mat-label>
+      <mat-select formControlName="countryId">
+        <mat-option *ngFor="let country of countries"
+          [value]="country.position">{{country.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>State Name</mat-label>
+      <mat-select #e2 formControlName="stateId">
+        <mat-option *ngFor="let state of filteredStates"
+          [value]="state.position">{{state.stateName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>City Name</mat-label>
+      <input matInput placeholder="City Name" formControlName="cityName">
+    </mat-form-field>
+
+    <div class="footer-button">
+      <button class="product-button" mat-raised-button color="primary" (click)="toSave()">Save</button>&nbsp;&nbsp;
+      <button class="product-button" mat-raised-button color="primary" (click)="toCancel()">Cancel</button>
+    </div>
+
+  </form>
+</div>

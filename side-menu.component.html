@@ -1,0 +1,8 @@
+<ul>
+  <h2>Details</h2>
+  <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+  <li *ngIf="userRole === 'admin'"><a routerLink="/user-list" routerLinkActive="active">User List</a></li>
+  <li *ngIf="userRole === 'admin'"><a routerLink="/country" routerLinkActive="active">Country</a></li>
+  <li *ngIf="userRole === 'admin'"><a routerLink="/state" routerLinkActive="active">State</a></li>
+  <li *ngIf="userRole === 'admin'"><a routerLink="/city" routerLinkActive="active">City</a></li>
+</ul>
